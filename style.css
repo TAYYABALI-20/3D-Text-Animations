@@ -1,0 +1,900 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: hsl(0 0% 0%);
+}
+
+/* XXX-XXX-XXX ANIMATIONS STYLING START XXX-XXX-XXX */
+
+.hi-frontend-friends {
+    --characters-gap: 1rem;
+    --color-white: hsl(0 0% 100%);
+    --main-transition: all 1.5s ease-in-out;
+
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--characters-gap);
+    transition: var(--main-transition);
+}
+
+.hi-frontend-friends h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 800;
+    width: 4rem;
+    aspect-ratio: 1;
+    opacity: 0;
+}
+
+.hi-frontend-friends h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: left;
+    width: 0;
+    height: 2px;
+    background-color: hsl(0 0% 100%);
+    transition: width 1.5s ease-in-out;
+    animation: greeting-chrs-after 0.5s linear 20s forwards;
+}
+
+@keyframes greeting-chrs-after {
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes greeting-chrs-top {
+    100% {
+        transform: translateY(-16rem);
+    }
+}
+
+.hi-frontend-friends h2:nth-child(1) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 4, 174), rgb(138, 4, 247));
+    animation:
+        greeting-chrs 0.5s ease-in-out 2.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(2) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(231, 247, 4), rgb(247, 53, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 3.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(3) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 4, 77), rgb(97, 4, 247));
+    animation:
+        greeting-chrs 0.5s ease-in-out 4.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(4) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 223, 4), rgb(247, 4, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 5.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(5) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(4, 130, 247), rgb(77, 4, 247));
+    animation:
+        greeting-chrs 0.5s ease-in-out 6.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(6) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(24, 247, 4), rgb(223, 247, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 7.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(7) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 4, 4), rgb(247, 101, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 8.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(8) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 4, 4), rgb(142, 247, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 9.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(9) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 4, 174), rgb(138, 4, 247));
+    animation:
+        greeting-chrs 0.5s ease-in-out 10.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(10) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(231, 247, 4), rgb(247, 53, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 11.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(11) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 4, 77), rgb(97, 4, 247));
+    animation:
+        greeting-chrs 0.5s ease-in-out 12.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(12) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 223, 4), rgb(247, 4, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 13.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(13) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(4, 130, 247), rgb(77, 4, 247));
+    animation:
+        greeting-chrs 0.5s ease-in-out 14.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(14) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(24, 247, 4), rgb(223, 247, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 15.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(15) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 4, 4), rgb(247, 101, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 16.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(16) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 4, 4), rgb(142, 247, 4));
+    animation:
+        greeting-chrs 0.5s ease-in-out 17.5s forwards;
+}
+
+.hi-frontend-friends h2:nth-child(17) {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom right, rgb(247, 4, 174), rgb(138, 4, 247));
+    animation:
+        greeting-chrs 0.5s ease-in-out 18.5s forwards;
+}
+
+@keyframes greeting-chrs {
+    100% {
+        opacity: 1;
+    }
+}
+
+.frontend-developer-characters {
+    --characters-gap: 1rem;
+    --main-transition: all 1.5s ease-in-out;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--characters-gap);
+    margin: -0.5rem 0;
+    transition: var(--main-transition);
+}
+
+.frontend-developer-character-1,
+.frontend-developer-character-2,
+.frontend-developer-character-3,
+.frontend-developer-character-4,
+.frontend-developer-character-5,
+.frontend-developer-character-6,
+.frontend-developer-character-7,
+.frontend-developer-character-8,
+.frontend-developer-character-9,
+.frontend-developer-character-10,
+.frontend-developer-character-11,
+.frontend-developer-character-12,
+.frontend-developer-character-13,
+.frontend-developer-character-14,
+.frontend-developer-character-15,
+.frontend-developer-character-16,
+.frontend-developer-character-17 {
+
+    --background-1: linear-gradient(to bottom right, rgb(247, 4, 174), rgb(138, 4, 247));
+    --background-2: linear-gradient(to bottom right, rgb(231, 247, 4), rgb(247, 53, 4));
+    --background-3: linear-gradient(to bottom right, rgb(247, 4, 77), rgb(97, 4, 247));
+    --background-4: linear-gradient(to bottom right, rgb(247, 223, 4), rgb(247, 4, 4));
+    --background-5: linear-gradient(to bottom right, rgb(4, 130, 247), rgb(77, 4, 247));
+    --background-6: linear-gradient(to bottom right, rgb(24, 247, 4), rgb(223, 247, 4));
+    --background-7: linear-gradient(to bottom right, rgb(247, 4, 4), rgb(247, 101, 4));
+    --background-8: linear-gradient(to bottom right, rgb(247, 4, 4), rgb(142, 247, 4));
+    --background-9: linear-gradient(to bottom right, rgb(247, 4, 174), rgb(138, 4, 247));
+    --background-10: linear-gradient(to bottom right, rgb(231, 247, 4), rgb(247, 53, 4));
+    --background-11: linear-gradient(to bottom right, rgb(247, 4, 77), rgb(97, 4, 247));
+    --background-12: linear-gradient(to bottom right, rgb(247, 223, 4), rgb(247, 4, 4));
+    --background-13: linear-gradient(to bottom right, rgb(4, 130, 247), rgb(77, 4, 247));
+    --background-14: linear-gradient(to bottom right, rgb(24, 247, 4), rgb(223, 247, 4));
+    --background-15: linear-gradient(to bottom right, rgb(247, 4, 4), rgb(247, 101, 4));
+    --background-16: linear-gradient(to bottom right, rgb(247, 4, 4), rgb(142, 247, 4));
+    --background-17: linear-gradient(to bottom right, rgb(247, 4, 174), rgb(138, 4, 247));
+
+    --color-white: hsl(0 0% 100%);
+    --background-black: hsl(0 0% 0%);
+    --background-black-rgb-1: rgb(15.5, 15.5, 15.5);
+    --background-black-rgb-2: rgba(0, 0, 0, 0.726);
+
+    position: relative;
+    margin: 3rem 0;
+    width: 4rem;
+    aspect-ratio: 1;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-white);
+    background: transparent !important;
+    /* border-radius: 0.5rem; */
+    transition: var(--main-transition);
+}
+
+.frontend-developer-character-1 {
+    background: var(--background-1);
+    transform: translateY(15rem);
+    animation: dev-chrs 1s ease-in-out 3s forwards;
+}
+
+.frontend-developer-character-2 {
+    background: var(--background-2);
+    transform: translateY(13rem);
+    animation: dev-chrs 1s ease-in-out 4s forwards;
+}
+
+.frontend-developer-character-3 {
+    background: var(--background-3);
+    transform: translateY(11rem);
+    animation: dev-chrs 1s ease-in-out 5s forwards;
+}
+
+.frontend-developer-character-4 {
+    background: var(--background-4);
+    transform: translateY(9rem);
+    animation: dev-chrs 1s ease-in-out 6s forwards;
+}
+
+.frontend-developer-character-5 {
+    background: var(--background-5);
+    transform: translateY(7rem);
+    animation: dev-chrs 1s ease-in-out 7s forwards;
+}
+
+.frontend-developer-character-6 {
+    background: var(--background-6);
+    transform: translateY(5rem);
+    animation: dev-chrs 1s ease-in-out 8s forwards;
+}
+
+.frontend-developer-character-7 {
+    background: var(--background-7);
+    transform: translateY(3rem);
+    animation: dev-chrs 1s ease-in-out 9s forwards;
+}
+
+.frontend-developer-character-8 {
+    background: var(--background-8);
+    transform: translateY(1rem);
+    animation: dev-chrs 1s ease-in-out 10s forwards;
+}
+
+.frontend-developer-character-9 {
+    background: var(--background-9);
+    animation: dev-chrs 1s ease-in-out 11s forwards;
+}
+
+.frontend-developer-character-10 {
+    background: var(--background-10);
+    transform: translateY(1rem);
+    animation: dev-chrs 1s ease-in-out 12s forwards;
+}
+
+.frontend-developer-character-11 {
+    background: var(--background-11);
+    transform: translateY(3rem);
+    animation: dev-chrs 1s ease-in-out 13s forwards;
+}
+
+.frontend-developer-character-12 {
+    background: var(--background-12);
+    transform: translateY(5rem);
+    animation: dev-chrs 1s ease-in-out 14s forwards;
+}
+
+.frontend-developer-character-13 {
+    background: var(--background-13);
+    transform: translateY(7rem);
+    animation: dev-chrs 1s ease-in-out 15s forwards;
+}
+
+.frontend-developer-character-14 {
+    background: var(--background-14);
+    transform: translateY(9rem);
+    animation: dev-chrs 1s ease-in-out 16s forwards;
+}
+
+.frontend-developer-character-15 {
+    background: var(--background-15);
+    transform: translateY(11rem);
+    animation: dev-chrs 1s ease-in-out 17s forwards;
+}
+
+.frontend-developer-character-16 {
+    background: var(--background-16);
+    transform: translateY(13rem);
+    animation: dev-chrs 1s ease-in-out 18s forwards;
+}
+
+.frontend-developer-character-17 {
+    background: var(--background-17);
+    transform: translateY(15rem);
+    animation: dev-chrs 1s ease-in-out 19s forwards;
+}
+
+@keyframes dev-chrs {
+    100% {
+        opacity: 0;
+    }
+}
+
+.frontend-developer-character-1::before,
+.frontend-developer-character-2::before,
+.frontend-developer-character-3::before,
+.frontend-developer-character-4::before,
+.frontend-developer-character-5::before,
+.frontend-developer-character-6::before,
+.frontend-developer-character-7::before,
+.frontend-developer-character-8::before,
+.frontend-developer-character-9::before,
+.frontend-developer-character-10::before,
+.frontend-developer-character-11::before,
+.frontend-developer-character-12::before,
+.frontend-developer-character-13::before,
+.frontend-developer-character-14::before,
+.frontend-developer-character-15::before,
+.frontend-developer-character-16::before,
+.frontend-developer-character-17::before {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    aspect-ratio: 1;
+    border-radius: inherit;
+    border: 2px solid var(--color-white);
+}
+
+.frontend-developer-character-1::before {
+    content: 'W';
+    transform: translateY(5rem);
+    background: var(--background-1);
+    animation: chr-1-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-1-before {
+    100% {
+        transform: translateY(2rem);
+    }
+}
+
+.frontend-developer-character-2::before {
+    content: 'E';
+    transform: translateY(9rem);
+    background: var(--background-2);
+    animation: chr-2-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-2-before {
+    100% {
+        transform: translateY(4rem);
+    }
+}
+
+.frontend-developer-character-3::before {
+    content: 'L';
+    transform: translateY(13rem);
+    background: var(--background-3);
+    animation: chr-3-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-3-before {
+    100% {
+        transform: translateY(6rem);
+    }
+}
+
+.frontend-developer-character-4::before {
+    content: 'C';
+    transform: translateY(17rem);
+    background: var(--background-4);
+    animation: chr-4-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-4-before {
+    100% {
+        transform: translateY(8rem);
+    }
+}
+
+.frontend-developer-character-5::before {
+    content: 'O';
+    transform: translateY(21rem);
+    background: var(--background-5);
+    animation: chr-5-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-5-before {
+    100% {
+        transform: translateY(10rem);
+    }
+}
+
+.frontend-developer-character-6::before {
+    content: 'M';
+    transform: translateY(25rem);
+    background: var(--background-6);
+    animation: chr-6-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-6-before {
+    100% {
+        transform: translateY(12rem);
+    }
+}
+
+.frontend-developer-character-7::before {
+    content: 'E';
+    transform: translateY(29rem);
+    background: var(--background-7);
+    animation: chr-7-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-7-before {
+    100% {
+        transform: translateY(14rem);
+    }
+}
+
+.frontend-developer-character-8::before {
+    content: 'T';
+    transform: translateY(34rem);
+    background: var(--background-8);
+    animation: chr-8-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-8-before {
+    100% {
+        transform: translateY(16rem);
+    }
+}
+
+.frontend-developer-character-9::before {
+    content: 'O';
+    transform: translateY(37rem);
+    background: var(--background-9);
+    animation: chr-9-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-9-before {
+    100% {
+        transform: translateY(17rem);
+    }
+}
+
+.frontend-developer-character-10::before {
+    content: 'M';
+    transform: translateY(34rem);
+    background: var(--background-10);
+    animation: chr-10-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-10-before {
+    100% {
+        transform: translateY(16rem);
+    }
+}
+
+.frontend-developer-character-11::before {
+    content: 'Y';
+    transform: translateY(29rem);
+    background: var(--background-11);
+    animation: chr-11-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-11-before {
+    100% {
+        transform: translateY(14rem);
+    }
+}
+
+.frontend-developer-character-12::before {
+    content: 'W';
+    transform: translateY(25rem);
+    background: var(--background-12);
+    animation: chr-12-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-12-before {
+    100% {
+        transform: translateY(12rem);
+    }
+}
+
+.frontend-developer-character-13::before {
+    content: 'O';
+    transform: translateY(21rem);
+    background: var(--background-13);
+    animation: chr-13-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-13-before {
+    100% {
+        transform: translateY(10rem);
+    }
+}
+
+.frontend-developer-character-14::before {
+    content: 'R';
+    transform: translateY(17rem);
+    background: var(--background-14);
+    animation: chr-14-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-14-before {
+    100% {
+        transform: translateY(8rem);
+    }
+}
+
+.frontend-developer-character-15::before {
+    content: 'L';
+    transform: translateY(13rem);
+    background: var(--background-15);
+    animation: chr-15-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-15-before {
+    100% {
+        transform: translateY(6rem);
+    }
+}
+
+.frontend-developer-character-16::before {
+    content: 'D';
+    transform: translateY(9rem);
+    background: var(--background-16);
+    animation: chr-16-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-16-before {
+    100% {
+        transform: translateY(4rem);
+    }
+}
+
+.frontend-developer-character-17::before {
+    content: '!';
+    transform: translateY(5rem);
+    background: var(--background-17);
+    animation: chr-17-before 3s ease-in-out forwards;
+}
+
+@keyframes chr-17-before {
+    100% {
+        transform: translateY(2rem);
+    }
+}
+
+.frontend-developer-character-1::after,
+.frontend-developer-character-2::after,
+.frontend-developer-character-3::after,
+.frontend-developer-character-4::after,
+.frontend-developer-character-5::after,
+.frontend-developer-character-6::after,
+.frontend-developer-character-7::after,
+.frontend-developer-character-8::after,
+.frontend-developer-character-9::after,
+.frontend-developer-character-10::after,
+.frontend-developer-character-11::after,
+.frontend-developer-character-12::after,
+.frontend-developer-character-13::after,
+.frontend-developer-character-14::after,
+.frontend-developer-character-15::after,
+.frontend-developer-character-16::after,
+.frontend-developer-character-17::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    aspect-ratio: 1;
+    background: inherit;
+    border: 2px solid var(--color-white);
+    border-radius: inherit;
+}
+
+.frontend-developer-character-1::after {
+    content: 'F';
+    background: var(--background-1);
+    animation: chr-1-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-1-after {
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.frontend-developer-character-2::after {
+    content: 'R';
+    background: var(--background-2);
+    animation: chr-2-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-2-after {
+    100% {
+        transform: translateX(-50%) translateY(2rem);
+    }
+}
+
+.frontend-developer-character-3::after {
+    content: 'O';
+    background: var(--background-3);
+    animation: chr-3-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-3-after {
+    100% {
+        transform: translateX(-50%) translateY(4rem);
+    }
+}
+
+.frontend-developer-character-4::after {
+    content: 'N';
+    background: var(--background-4);
+    animation: chr-4-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-4-after {
+    100% {
+        transform: translateX(-50%) translateY(6rem);
+    }
+}
+
+.frontend-developer-character-5::after {
+    content: 'T';
+    background: var(--background-5);
+    animation: chr-5-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-5-after {
+    100% {
+        transform: translateX(-50%) translateY(8rem);
+    }
+}
+
+.frontend-developer-character-6::after {
+    content: 'E';
+    background: var(--background-6);
+    animation: chr-6-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-6-after {
+    100% {
+        transform: translateX(-50%) translateY(10rem);
+    }
+}
+
+.frontend-developer-character-7::after {
+    content: 'N';
+    background: var(--background-7);
+    animation: chr-7-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-7-after {
+    100% {
+        transform: translateX(-50%) translateY(12rem);
+    }
+}
+
+.frontend-developer-character-8::after {
+    content: 'D';
+    background: var(--background-8);
+    animation: chr-8-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-8-after {
+    100% {
+        transform: translateX(-50%) translateY(14rem);
+    }
+}
+
+.frontend-developer-character-9::after {
+    content: 'D';
+    background: var(--background-9);
+    animation: chr-9-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-9-after {
+    100% {
+        transform: translateX(-50%) translateY(15rem);
+    }
+}
+
+.frontend-developer-character-10::after {
+    content: 'E';
+    background: var(--background-10);
+    animation: chr-10-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-10-after {
+    100% {
+        transform: translateX(-50%) translateY(14rem);
+    }
+}
+
+.frontend-developer-character-11::after {
+    content: 'V';
+    background: var(--background-11);
+    animation: chr-11-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-11-after {
+    100% {
+        transform: translateX(-50%) translateY(12rem);
+    }
+}
+
+.frontend-developer-character-12::after {
+    content: 'E';
+    background: var(--background-12);
+    animation: chr-12-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-12-after {
+    100% {
+        transform: translateX(-50%) translateY(10rem);
+    }
+}
+
+.frontend-developer-character-13::after {
+    content: 'L';
+    background: var(--background-13);
+    animation: chr-13-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-13-after {
+    100% {
+        transform: translateX(-50%) translateY(8rem);
+    }
+}
+
+.frontend-developer-character-14::after {
+    content: 'O';
+    background: var(--background-14);
+    animation: chr-14-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-14-after {
+    100% {
+        transform: translateX(-50%) translateY(6rem);
+    }
+}
+
+.frontend-developer-character-15::after {
+    content: 'P';
+    background: var(--background-15);
+    animation: chr-15-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-15-after {
+    100% {
+        transform: translateX(-50%) translateY(4rem);
+    }
+}
+
+.frontend-developer-character-16::after {
+    content: 'E';
+    background: var(--background-16);
+    animation: chr-16-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-16-after {
+    100% {
+        transform: translateX(-50%) translateY(2rem);
+    }
+}
+
+.frontend-developer-character-17::after {
+    content: 'R';
+    background: var(--background-17);
+    animation: chr-17-after 3s ease-in-out forwards;
+}
+
+@keyframes chr-17-after {
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* XXX-XXX-XXX ANIMATIONS STYLING END XXX-XXX-XXX */
